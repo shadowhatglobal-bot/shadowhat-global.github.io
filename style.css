@@ -1,14 +1,14 @@
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
-    background: #0a0f1a;
-    color: #e5e7eb;
+    background: #020617; /* Dark base */
+    color: #e0f2fe; /* Soft light blue text */
 }
 
 /* NAVBAR */
 .navbar {
     background: #020617;
-    border-bottom: 1px solid #1f2937;
+    border-bottom: 1px solid #1E90FF; /* Primary blue */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -27,6 +27,7 @@ body {
     height: 45px;
 }
 
+/* LINKS */
 .nav-links {
     list-style: none;
     display: flex;
@@ -34,22 +35,29 @@ body {
 }
 
 .nav-links a {
-    color: #e5e7eb;
+    color: #e0f2fe;
     text-decoration: none;
     font-size: 14px;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #22c55e;
+    color: #38BDF8; /* Accent blue */
 }
 
+/* CTA BUTTON */
 .cta-btn {
-    background: #22c55e;
+    background: #1E90FF;
     color: #020617;
     padding: 8px 14px;
     border-radius: 6px;
     text-decoration: none;
     font-size: 14px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #38BDF8;
 }
 
 /* HERO */
@@ -60,6 +68,7 @@ body {
 
 .hero-logo {
     width: 180px;
+    margin-bottom: 20px;
 }
 
 /* CONTENT */
@@ -69,8 +78,9 @@ body {
     padding: 40px 20px;
 }
 
+/* HEADINGS */
 h2 {
-    color: #22c55e;
+    color: #38BDF8;
 }
 
 /* GRID */
@@ -80,24 +90,39 @@ h2 {
     gap: 20px;
 }
 
+/* CARDS */
 .card {
     background: #020617;
     padding: 20px;
-    border: 1px solid #1f2937;
+    border: 1px solid #1E90FF;
     border-radius: 8px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #38BDF8;
+    transform: translateY(-3px);
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    border-top: 1px solid #1f2937;
+    border-top: 1px solid #1E90FF;
 }
+
+/* ACTIVE NAV LINK */
+.nav-link.active {
+    color: #38BDF8;
+    border-bottom: 2px solid #38BDF8;
+    padding-bottom: 2px;
+}
+
 /* MOBILE MENU ICON */
 .menu-icon {
     display: none;
     font-size: 26px;
-    color: #22c55e;
+    color: #1E90FF;
     cursor: pointer;
 }
 
@@ -123,6 +148,7 @@ footer {
         align-items: center;
         display: none;
         padding: 20px 0;
+        border-top: 1px solid #1E90FF;
     }
 
     #menu-toggle:checked + .menu-icon + .nav-links {
@@ -130,6 +156,6 @@ footer {
     }
 
     .cta-btn {
-        display: none; /* keep UI clean on mobile */
+        display: none;
     }
 }
