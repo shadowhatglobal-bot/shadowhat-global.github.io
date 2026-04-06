@@ -93,3 +93,43 @@ footer {
     padding: 20px;
     border-top: 1px solid #1f2937;
 }
+/* MOBILE MENU ICON */
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    color: #22c55e;
+    cursor: pointer;
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle {
+    display: none;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #020617;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 20px 0;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+    }
+
+    .cta-btn {
+        display: none; /* keep UI clean on mobile */
+    }
+}
